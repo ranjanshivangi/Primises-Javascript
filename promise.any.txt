@@ -1,0 +1,12 @@
+Promise.any() Method
+1) The Promise.any() takes an iterable Object, such as an Array of promises as an input. Once a promise is fulfilled, a single promise is returned and the promise is resolved using the value of the promise.
+2) If no promises in the iterable fulfill (if all of the given promises are rejected), then the returned promise is rejected with an AggregateError (that groups together individual errors).
+
+Fulfillment of Promise.any()
+1) Unlike Promise.all(), this method is used to return the first promise that fulfills.
+2) It is short-circuited right after a promise is completed, so as soon as a promise is fulfilled, it will not wait for other promises to complete.
+3) When a non-empty iterable is passed, and any of the promises fulfill, or are non-promises, then the promise returned by this method is fulfilled asynchronously.
+
+Rejection of Promise.any()
+1) Promise.any() rejects with an AggregateError if no promise fulfils.
+2) The AggregateError object represents an error when several errors need to be wrapped in a single error. It is thrown when multiple errors need to be reported by an operation.

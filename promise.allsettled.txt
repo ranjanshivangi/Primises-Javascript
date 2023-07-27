@@ -1,0 +1,7 @@
+The Promise.allSettled() method in JavaScript is used to get a promise when all inputs are settled that is either fulfilled or rejected.
+It basically returns a promise that gets resolved when all other promises which are passed are either fulfilled or rejected and "in output it displays the array of objects" which particularly displays the status and the value of each promise individually.
+
+Syntax:
+Promise.allSettled(iterable);
+
+Parameters: This method accept a single parameter iterable which takes an array of promises or a normal array which contains some objects.

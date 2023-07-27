@@ -1,0 +1,14 @@
+Promise.all() Method
+1) The Promise.all() method accepts an iterable Object, such as an Array of promises as an input and returns a single promise that resolves to a result array of the input promises.
+2) When all input promises have been resolved or the iterable input does not contain a promise, the returned promise will be resolved.
+3) It rejects immediately when an input promise rejects or non-promise throws an error and will reject with that first rejection message / error message.
+4) It is often used when there are many asynchronous tasks involved that the overall code relies on to work successfully - all of the ones we want to do before we continue to execute the code.
+5) This method aggregates the results of multiple promises.
+
+Fulfillment of Promise.all()
+1) When an empty iterable is passed, the promise returned by this method is executed synchronously. The resolved value will be an empty array.
+2) When a non-empty iterable is passed, and all of the promises fulfill or are not promises,the promise returned by this method will be executed asynchronously.
+
+Rejection of Promise.all() : Fail-Fast Behavior
+Promise.all() shows fail-fast behavior, that is, Promise.all() asynchronously rejects with the value of the promise that rejected, if any of the passed-in elements are rejected.
+For example, if we pass in two promises that resolve after a timeout and one promise that rejects immediately, then Promise.all() will reject immediately. It does not depend on if the other promises have resolved.

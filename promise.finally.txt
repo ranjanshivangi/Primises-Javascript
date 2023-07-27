@@ -1,0 +1,5 @@
+Promise.prototype.finally()
+1) The finally() method returns a Promise.
+2) When a Promise is completed, either resolved or rejected,this specified callback function is executed.
+3) This helps to avoid duplicating code in both the promise's then() and catch() handlers.
+4) The finally() method will help if you're going to do any processing or cleanup work once a promise is made, regardless of the outcome.
